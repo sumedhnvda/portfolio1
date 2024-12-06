@@ -3,157 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌟Portfolio🌟</title>
-    <style>
-        @import url('https://fonts.cdnjs.com/css2?family=Comic+Neue&display=swap');
-
-        body {
-            background: repeating-linear-gradient(45deg, 
-                #ff00ff, #ff00ff 10px, 
-                #00ff00 10px, #00ff00 20px);
-            font-family: "Comic Neue", "Comic Sans MS", cursive;
-            margin: 0;
-            cursor: url("/api/placeholder/32/32"), auto;
-        }
-
-        .container {
-            background-color: yellow;
-            border: 10px dashed blue;
-            padding: 20px;
-            max-width: 800px;
-            margin: 20px auto;
-            box-shadow: 15px 15px 0 red, 
-                       30px 30px 0 green,
-                       45px 45px 0 blue;
-        }
-
-        header {
-            background-color: lime;
-            padding: 20px;
-            text-align: center;
-            border: 5px dotted red;
-            animation: spin 10s linear infinite;
-        }
-
-        @keyframes spin {
-            100% { transform: rotate(360deg); }
-        }
-
-        h1 {
-            font-size: 48px;
-            color: red;
-            text-shadow: 
-                3px 3px 0 blue,
-                6px 6px 0 green,
-                9px 9px 0 yellow;
-            animation: rainbow 2s linear infinite;
-        }
-
-        @keyframes rainbow {
-            0% { color: red; }
-            33% { color: blue; }
-            66% { color: green; }
-            100% { color: red; }
-        }
-
-        .profile-pic {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            border: 10px groove gold;
-            animation: wobble 2s ease-in-out infinite;
-        }
-
-        @keyframes wobble {
-            0%, 100% { transform: rotate(-10deg); }
-            50% { transform: rotate(10deg); }
-        }
-
-        .links {
-            background-color: cyan;
-            padding: 20px;
-            margin: 20px 0;
-            border: 5px ridge magenta;
-        }
-
-        .links a {
-            color: red;
-            font-size: 24px;
-            text-decoration: none;
-            margin: 0 10px;
-            background-color: yellow;
-            padding: 5px;
-            border: 3px outset purple;
-        }
-
-        .links a:hover {
-            background-color: lime;
-            transform: rotate(180deg);
-            transition: transform 0.5s;
-        }
-
-        .contact {
-            background-color: orange;
-            padding: 20px;
-            border: 8px inset purple;
-            font-size: 20px;
-            text-align: center;
-        }
-
-        marquee {
-            background-color: white;
-            color: red;
-            font-size: 24px;
-            padding: 10px;
-        }
-
-        .blink {
-            animation: blink 1s step-end infinite;
-        }
-
-        @keyframes blink {
-            50% { opacity: 0; }
-        }
-    </style>
+    <title>Portfolio</title>
 </head>
 <body>
-    <marquee scrollamount="10" direction="right">🚨 The Developer Your Code Warned You About 🚨</marquee>
+    <marquee scrollamount="10" direction="right">The Developer Your Code Warned You About</marquee>
     
     <div class="container">
         <header>
-            <h1 class="blink">💫 Sumedh 💫</h1>
-            <p style="font-size: 24px; color: purple;">
-                ~*~*~ Developer • AI Enthusiast ~*~*~
-            </p>
+            <h1>Sumedh</h1>
+            <p>Developer • AI Enthusiast</p>
         </header>
 
-        <img src="handsome_man.jpeg" alt="Sumedh's Photo" class="profile-pic">
+        <img src="handsome_man.jpeg" alt="Sumedh's Photo" width="300" height="300">
 
         <div class="links">
-            <h2 style="color: blue; text-decoration: underline overline wavy red;">
-                ★☆★ Let's Connect! ★☆★
-            </h2>
-            <p style="color: green; font-size: 20px;">
-                ｡･:*:･ﾟ★ Find me on social media or just call me! ★ﾟ･:*:･｡
-            </p>
-            <a href="https://github.com/sumedhnvda">✨GitHub✨</a>
-            <a href="https://www.linkedin.com/in/sumedhnavuda/">💼LinkedIn💼</a>
-            <a href="https://x.com/SumedhNavuda">🐦X🐦</a>
+            <h2>Let's Connect!</h2>
+            <p>Find me on social media or just call me!</p>
+            <a href="https://github.com/sumedhnvda">GitHub</a> |
+            <a href="https://www.linkedin.com/in/sumedhnavuda/">LinkedIn</a> |
+            <a href="https://x.com/SumedhNavuda">X</a>
         </div>
 
         <div class="contact">
-            <h2 style="color: purple; text-decoration: underline overline dotted green;">
-                📞 Contact Me! 📞
-            </h2>
-            <p class="blink">
-                ☎️ Phone: 821-753-4845<br>
-                📧 Email: sumedhnavuda@outlook.com
+            <h2>Contact Me!</h2>
+            <p>
+                Phone: 821-753-4845<br>
+                Email: sumedhnavuda@outlook.com
             </p>
         </div>
     </div>
 
-    <marquee scrollamount="15" direction="left">
-        🌟 GIVE ME THE JOB  🌟
-    </marquee>
+    <marquee scrollamount="15" direction="left">GIVE ME THE JOB</marquee>
 </body>
 </html>
