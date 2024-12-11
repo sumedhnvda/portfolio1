@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1024">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Sumedh Navuda</title>
     <style>
         * {
@@ -43,14 +43,14 @@
 
         .logo {
             font-weight: 700;
-            font-size: 1.2em;
+            font-size: 1.5em;
         }
 
         nav a {
             color: #111;
             text-decoration: none;
             margin-left: 30px;
-            font-size: 0.9em;
+            font-size: 1em;
             transition: opacity 0.3s ease;
         }
 
@@ -63,30 +63,45 @@
             margin-bottom: 40px;
         }
 
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
         .project {
-            margin-bottom: 100px;
+            flex: 1 1 calc(50% - 20px);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .project img {
             width: 100%;
             aspect-ratio: 16/9;
             object-fit: cover;
-            margin-bottom: 30px;
-            border-radius: 8px;
+        }
+
+        .project-content {
+            padding: 20px;
         }
 
         .project h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
+            font-size: 1.5em;
+            margin-bottom: 10px;
         }
 
         .tech-stack {
-            margin: 20px 0;
+            margin: 10px 0;
         }
 
         .tech {
             display: inline-block;
-            background: #f8f9fa;
+            background: #e9ecef;
             padding: 5px 10px;
             border-radius: 15px;
             margin-right: 10px;
@@ -95,25 +110,31 @@
         }
 
         .project-links {
-            margin-top: 30px;
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
         }
 
         .project-links a {
-            display: inline-block;
-            margin-right: 20px;
-            color: #111;
             text-decoration: none;
-            border-bottom: 1px solid #111;
-            transition: opacity 0.3s ease;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            background: #007bff;
+            transition: background 0.3s ease;
         }
 
         .project-links a:hover {
-            opacity: 0.6;
+            background: #0056b3;
         }
 
         footer {
-            margin-top: 100px;
-            padding: 60px 0;
+            margin-top: 50px;
+            padding: 40px 0;
             border-top: 1px solid #eee;
             text-align: center;
         }
@@ -132,56 +153,92 @@
         .social-links a:hover {
             opacity: 0.6;
         }
+
+        @media (max-width: 768px) {
+            .projects {
+                flex-direction: column;
+            }
+
+            .project {
+                flex: 1 1 100%;
+            }
+            
+        }
+        .buttons a {
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            border: 2px solid #111;
+            border-radius: 8px;
+            color: #111;
+            font-size: 1em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            background: linear-gradient(120deg, #f8f9fa, #e0e0e0);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .buttons a:hover {
+            background: #111;
+            color: #fff;
+            border-color: #fff;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .buttons a:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
     <nav>
         <div class="container">
-            <a class="logo" style="font-size:x-large;"">Projects</a>
+            <a class="logo">Projects</a>
             <div class="menu">
-                <a href="index.html" style="font-size:large;">Home</a>
+                <a href="index.html">Home</a>
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <div class="project">
-            <img src="ProjectPhotos/project2.png" style="object-fit:fill;" alt="Code Editor">
-            <h2>Beginners code editor</h2>
-            <p>The cloud-based code editor is a beginner-friendly platform that supports all programming languages, enabling users to code directly in their browsers. It dynamically creates Docker containers for each user, providing isolated environments pre-configured with language interpreters and compilers. The editor features inbuilt AI that offers hints to help users understand coding concepts instead of simply copying solutions. Real-time collaboration and feedback are facilitated through WebSockets, ensuring a seamless and interactive coding experience. This tool is designed to make learning programming accessible and engaging for novices.</p>
-            <div class="tech-stack">
-                <span class="tech">Node.js</span>
-                <span class="tech">React.js</span>
-                <span class="tech">OpenAI</span>
+        <div class="projects">
+            <div class="project">
+                <img src="ProjectPhotos/project2.png" style="object-fit: fill;" alt="Code Editor">
+                <div class="project-content">
+                    <h2>Beginners Code Editor</h2>
+                    <p>The cloud-based code editor supports all programming languages, providing isolated environments pre-configured with interpreters and compilers. It features an AI assistant to help users understand coding concepts.</p>
+                    <div class="tech-stack">
+                        <span class="tech">Node.js</span>
+                        <span class="tech">React.js</span>
+                        <span class="tech">OpenAI</span>
+                    </div>
+                    <div class="buttons">
+                        <a href="https://github.com/sumedhnvda/cloudcodeeditor" target="_blank">GitHub</a>
+                    </div>
+                </div>
             </div>
-            <div class="project-links">
-                <a href="https://github.com/sumedhnvda/cloudcodeeditor" target="_blank">View Code →</a>
+
+            <div class="project">
+                <img src="ProjectPhotos/project1.jpeg" style="object-fit: fill;" alt="Face Detection">
+                <div class="project-content">
+                    <h2>Face Detection Software</h2>
+                    <p>AI face recognition system using OpenCV and the LBPH algorithm, creating unique 'face fingerprints' for recognition.</p>
+                    <div class="tech-stack">
+                        <span class="tech">Python</span>
+                        <span class="tech">OpenCV</span>
+                    </div>
+                    <div class="buttons">
+                        <a href="https://github.com/sumedhnvda/miniproject" target="_blank">Github</a>
+                    </div>
+                </div>
             </div>
         </div>
-    
-        <div class="project">
-            <img src="ProjectPhotos/project1.jpeg" alt="Computer Vision Project">
-            <h2>Face detection Software </h2>
-            <p>AI face recognition System: A blend of innovation and tech! Armed with OpenCV, we clicked 500 B&W pics using the laptop cam then run LBPH (Local Binary Pattern Histograms) algorithm on that image
-                It breaks down each face's texture into patterns, creating histograms that are like unique 'face fingerprints'. When a new face appears, our system calculates its pattern and compares it to these 'fingerprints'. If they match, bingo! The face is recognized, If not then 'unknown'</p>
-            <div class="tech-stack">
-                <span class="tech">Python</span>
-                <span class="tech">OpenCV</span>
-            </div>
-            <div class="project-links">
-                <a href="https://github.com/sumedhnvda/miniproject" target="_blank">View Code →</a>
-            </div>
-        </div>
-        </div>
-       
+    </div>
+
     <footer>
-        <div class="container">
-            <div class="social-links">
-                <a href="https://github.com/sumedhnvda" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
-                <a href="https://x.com/SumedhNavuda" target="_blank">X</a>
-            </div>
-        </div>
     </footer>
 </body>
 </html>
